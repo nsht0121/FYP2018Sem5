@@ -1,0 +1,182 @@
+$tc: (#F7BC5D, #4c4c4c, #C4EADA, #E7E8EA, #EF7B7B, #C84A4A);
+
+html, body {
+    height: 100vh;
+    background-color: nth($tc, 2);
+}
+
+#header {
+    position: relative;
+    background-color: nth($tc, 1);
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        height: 100px;
+        width: 120px;
+
+        @media screen and (max-width: 768px) {
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+
+            img {
+                height: 80px;
+            }
+        }
+    }
+    .top, .bot {
+        height: 50px;
+    }
+    .ui.menu {
+        margin: 0;
+        height: 50px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+
+        .item {
+            margin: 6px 0;
+            padding: 0 12px;
+            border-radius: 0;
+
+            &:hover, &.active {
+                color: white;
+                background-color: nth($tc, 2);
+            }
+        }
+        form.item {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .top .ui.menu.mobile.hidden .right.menu {
+        margin: 4px 0;
+
+        .item {
+            margin: 0;
+
+            &:hover, &.active {
+                background-color: nth($tc, 5);
+            }
+        }
+        .logout.item {
+            height: 100%;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+    }
+}
+
+#main {
+    padding: 40px 0;
+    background: #f0f0f0 url(/../images/background.png) repeat;
+    scroll-behavior: smooth;
+
+    .ui.background.segment {
+        border-top: 5px solid nth($tc, 5);
+    }
+    .ui.segments {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .ui.segment {
+        border: none;
+        border-radius: 0;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        p {
+            line-height: 1.5em;
+            font-size: 1.1em;
+        }
+    }
+    .ui.center.aligned.inverted.segment {
+        color: white;
+        background-color: nth($tc, 2);
+    }
+    #ch2h {
+        margin-top: 90px;
+    }
+    ol.ui.list {
+        line-height: 1.5em;
+        font-size: 1.1em;
+
+        li {
+            padding-bottom: 0.8em;
+        }
+    }
+    #contact a {
+        color: nth($tc, 5);
+        transition: .2s;
+
+        &:hover {
+            color: nth($tc, 6);
+        }
+    }
+    .ribbon.label {
+        margin-bottom: 8px;
+        color: white;
+        background-color: nth($tc, 5);
+        border-color: nth($tc, 6);
+    }
+    .fillpage {
+        min-height: calc(100vh - 481.859px - 131px);
+        padding-top: calc((100vh - 481.859px - 131px)/4);
+    }
+    .circular.icon {
+        color: nth($tc, 5);
+    }
+    #home {
+        .ui.segments {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .ui.top.attached {
+                font-size: 1.2em;
+                color: white;
+                border: none;
+                border-radius: 0;
+            }
+            .ui.bottom.attached {
+                flex: 1;
+            }
+        }
+        .column {
+            &:nth-child(odd) .top.attached {
+                background-color: nth($tc, 5);
+            }
+            &:nth-child(even) .top.attached {
+                background-color: nth($tc, 2);
+            }
+        }
+    }
+}
+
+#footer {
+    background-color: nth($tc, 2);
+
+    .ui.vertical.segment {
+        padding: 50px 0;
+    }
+    a {
+        padding: 8px 0;
+        transition: .2s;
+
+        &:hover {
+            color: nth($tc, 1) !important;
+        }
+    }
+    p.copyright {
+        color: white;
+    }
+}

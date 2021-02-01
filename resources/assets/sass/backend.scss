@@ -1,0 +1,55 @@
+$theme-color: #2E4A62;
+
+html, body {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.ui.vertical.segment {
+    border: none;
+}
+
+#top-menu {
+    background-color: $theme-color;
+}
+
+#sub-menu {
+    padding: 16px auto;
+    background-color: #282b2b;
+}
+
+#left-nav {
+    .first.item {
+        color: white;
+        text-align: center;
+        background-color: $theme-color;
+    }
+
+    .active {
+        color: white;
+        background-color: #719071;
+    }
+
+    a.item:hover {
+        color: black;
+        background-color: #C3D1C3;
+    }
+}
+
+#main {
+    .ui.top.attached.inverted.header {
+        font-weight: normal;
+        background-color: $theme-color;
+    }
+
+    .ui.statistic {
+        margin: 16px auto;
+    }
+}
+
+#control-panel {
+    .ui.button {
+        margin-bottom: 8px;
+    }
+}
